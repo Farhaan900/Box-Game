@@ -32,6 +32,7 @@ export class PlayAreaComponent implements OnInit {
       alert("No name entered");
       this.router.navigate(['/', 'start']);
     }
+    else {
     this.interval = setInterval(() => {
       if (this.timeLeft > 0) {
         this.timeLeft = this.timeLeft - 0.01;
@@ -55,6 +56,7 @@ export class PlayAreaComponent implements OnInit {
         this.router.navigate(['/', 'gameover']);
       }
     }, 10)
+  }
 
     // console.log("am i getting executed ???")
     // this.getPlayers();

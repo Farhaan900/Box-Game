@@ -15,6 +15,7 @@ import { PlayBox4Component } from './play-box4/play-box4.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameoverComponent } from './gameover/gameover.component';
 import { DummyComponent } from './dummy/dummy.component';
+import { HighScoreComponent } from './high-score/high-score.component';
  
  
 
@@ -29,7 +30,8 @@ import { DummyComponent } from './dummy/dummy.component';
     PlayBox3Component,
     PlayBox4Component,
     GameoverComponent,
-    DummyComponent
+    DummyComponent,
+    HighScoreComponent
   ],
   imports: [
     BrowserModule,
