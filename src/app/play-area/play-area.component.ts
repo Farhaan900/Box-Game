@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Players } from '../players';
 import { PlayerService } from '../player.service';
-import { Observable, of } from 'rxjs';
 import { ColorerService } from '../colorer.service';
 
 
@@ -33,41 +31,27 @@ export class PlayAreaComponent implements OnInit {
       this.router.navigate(['/', 'start']);
     }
     else {
-    this.interval = setInterval(() => {
-      if (this.timeLeft > 0) {
-        this.timeLeft = this.timeLeft - 0.01;
-        this.timer = this.timer - 0.01;
-        this.intTimeLeft = Math.floor(this.timeLeft) + 1
-        // console.log("time left " + this.timeLeft + "interval timer" + this.timer)
+      this.interval = setInterval(() => {
+        
+        if (this.timeLeft > 0) {
+          this.timeLeft = this.timeLeft - 0.01;
+          this.timer = this.timer - 0.01;
+          this.intTimeLeft = Math.floor(this.timeLeft) + 1
 
-        if (this.timer < 0) {
-          console.log("timer " + this.timeLeft)
-          // console.log("interval " + this.timer)
-          this.onClick(5)
-
-
+          if (this.timer < 0) {
+            this.onClick(5)
+          }
         }
-      }
-      else {
+        else {
 
-        clearInterval(this.interval)
-        this.playerService.setPlayers(this.playerName, this.playerScore)
-        alert("Game over");
-        this.router.navigate(['/', 'gameover']);
-      }
-    }, 10)
+          clearInterval(this.interval)
+          this.playerService.setPlayers(this.playerName, this.playerScore)
+          alert("Game over");
+          this.router.navigate(['/', 'gameover']);
+        }
+      }, 10)
+    }
   }
-
-    // console.log("am i getting executed ???")
-    // this.getPlayers();
-  }
-  // getPlayers() {
-  //   this.playerService.getPlayers().subscribe((x)  => {
-  //     this.players = x
-  //     console.log(this.players)
-  //   });
-  // }
-
 
   color1 = this.colorer.colorExp1;
   color2 = this.colorer.colorExp2;
@@ -75,8 +59,6 @@ export class PlayAreaComponent implements OnInit {
   color4 = this.colorer.colorExp4;
 
   onClick(value) {
-
-    // console.log("before clicking color : " + this.color1)
     this.colorer.clicked(value);
     this.color1 = this.colorer.colorExp1;
     this.color2 = this.colorer.colorExp2;
@@ -84,15 +66,5 @@ export class PlayAreaComponent implements OnInit {
     this.color4 = this.colorer.colorExp4;
     this.timer = this.colorer.intervalServe;
     this.playerScore = this.colorer.score;
-
-
-    // this.router.navigateByUrl('/dummy', { skipLocationChange: true }).then(() => {
-    //   this.router.navigate(['/playarea'])
-    // })
-    // console.log("after clicking color : " + this.color1)
-    // window.location.reload()
   }
-
-
-
 }

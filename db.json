@@ -26,19 +26,34 @@
       "id": 5
     },
     {
-      "name": "",
+      "name": "foo",
       "score": 0,
       "id": 6
     },
     {
       "name": "foo",
-      "score": 190,
+      "score": 0,
       "id": 7
     },
     {
       "name": "foo",
-      "score": 190,
+      "score": 40,
       "id": 8
+    },
+    {
+      "name": "foo",
+      "score": 40,
+      "id": 9
+    },
+    {
+      "name": "foo",
+      "score": 65,
+      "id": 10
+    },
+    {
+      "name": "gfhg",
+      "score": 0,
+      "id": 11
     }
   ],
   "posts": [

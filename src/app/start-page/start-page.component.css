@@ -1,12 +1,9 @@
 div {
-
-
     margin-top : 180px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     color : rgb(189, 182, 182);
     text-shadow: 0px 0px 20px black;
-
 }
 
 input {
@@ -14,17 +11,13 @@ input {
     border : 1px solid black;
     border-radius: 5px;
     padding : 10px;
-    width : 250px;
+    width : 220px;
 
 }
 
 input:focus{
-
-
     box-shadow: 0px 0px 15px white;
-
 }
-
 
 button {
     background-color: #4CAF50; /* Green */

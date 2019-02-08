@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { PlayerService } from '../player.service';
 
 
@@ -12,30 +11,11 @@ import { PlayerService } from '../player.service';
 export class StartPageComponent implements OnInit {
 
   constructor(private playerService: PlayerService) { }
-  // constructor(private http: HttpClient ) { }
 
   ngOnInit() {
   }
-
-
-
-
-
-  onClick(value):any {
-
+  onClick(value): any {
     this.playerService.setPlayerName(value);
-    console.log(value)
   }
-
-  // onClick(value):any{
-  //   return this.http
-  //   .post("http://localhost:3004/players", {
-  //     value
-  //   })
-  //   .subscribe(console.log);
- 
-    // console.log(event.target.id);
-  // }
-
 
 }

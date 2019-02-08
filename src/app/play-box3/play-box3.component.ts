@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ColorerService } from '../colorer.service';
 import { PlayAreaComponent } from '../play-area/play-area.component'
 
 
@@ -14,8 +13,5 @@ export class PlayBox3Component implements OnInit {
 
   ngOnInit() {
   }
-
   colorExp = this.parent.color3;
-
-
 }
