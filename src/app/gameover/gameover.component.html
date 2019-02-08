@@ -1,0 +1,14 @@
+<h3>Player name : {{curPlayer}}</h3>
+<h3>Your score : {{curPlayerScore}}</h3>
+<!-- <div *ngFor="let a of players">Name : {{a.name}} Score : {{a.score}}</div> -->
+
+<table>
+  <tr>
+    <th>NAME</th>
+    <th>Score</th>
+  </tr>
+  <tr *ngFor="let a of players">
+  <td>{{a.name}}</td>
+  <td>{{a.score}}</td>
+  </tr>
+</table>

@@ -1,0 +1,24 @@
+<!-- <div *ngFor = "let a of players"> {{a.value}}</div> -->
+
+<div class = "name-score"><p>Your name : {{playerName}}</p><p>Score : {{playerScore}}</p></div>
+<div>Time left : {{intTimeLeft}}</div>
+<div class="play-area-container">
+  <div class="top">
+    <div class="box" (click) = "onClick(1)" [ngStyle] = "{'background-color' : color1}">
+      <app-play-box1></app-play-box1>
+    </div>
+    <div class="box" (click) = "onClick(2)" [ngStyle] = "{'background-color' : color2}">
+      <app-play-box2></app-play-box2>
+    </div>
+  </div>
+  <div class="bot">
+    <div class="box" (click) = "onClick(3)" [ngStyle] = "{'background-color' : color3}">
+      <app-play-box3></app-play-box3>
+    </div>
+    <div class="box" (click) = "onClick(4)" [ngStyle] = "{'background-color' : color4}">
+      <app-play-box4></app-play-box4>
+    </div>
+  </div>
+</div>
+
+<button routerLink="/gameover">End Game</button>
